@@ -22,7 +22,7 @@ npm i redux-logger --save
 npm i redux-thunk --save
 
 # create app directories
-echo "Making directories inspired from redux and some best practices"
+# echo "Making directories inspired from redux and some best practices"
 current_directory=`pwd`
 app_dir="${current_directory}/src"
 
@@ -47,9 +47,8 @@ mkdir $assets_dir
 mkdir "${assets_dir}/images"
 mkdir "${assets_dir}/styles"
 
-
 # create related files
-cwd=`dirname "${0}"`
+cwd="$(dirname "$(readlink "$0")")"
 
 cp "${cwd}/App.js" $app_dir
 cp "${cwd}/Root.js" $app_dir
@@ -57,6 +56,10 @@ cp "${cwd}/Scenes.js" $app_dir
 cp "${cwd}/reducers/index.js" $reducers_dir
 cp "${cwd}/store/configureStore.js" $store_dir
 cp "${cwd}/utils/AppStyles.js" $utils_dir
+cp "${cwd}/reducers/sampleReducer.js" $reducers_dir
+cp "${cwd}/actions/sampleAction.js" $actions_dir
+cp "${cwd}/containers/SampleHome.js" $containers_dir
+cp "${cwd}/components/SampleHome.js" $components_dir
 
 echo "Finished setting up!\nNext rewrite index.(ios|android).js to bind Root to AppRegistry.registerComponent and try react-native run-ios"
 
