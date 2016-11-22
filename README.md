@@ -61,14 +61,14 @@ git clone https://github.com/YuheiNakasaka/react-native-init
 ln -s ./setup /usr/local/bin/rn-init
 ```
 
-3) make a directory for new project
+3) move to your working-directory
 
 ```
-mkdir new-project
+cd working-directory
 ```
 
 4) run the script
 
 ```
-rn-init
+rn-init NewProjectName
 ```
