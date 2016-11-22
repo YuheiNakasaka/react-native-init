@@ -47,9 +47,28 @@ This is a simple boilderplate to start development of react native.
 
 Read [Getting Started](https://facebook.github.io/react-native/docs/getting-started.html).
 
-# Usage
+# Example
+
+1) clone repo
 
 ```
-$ git clone <this repo>
-$ ./setup.sh
+git clone https://github.com/YuheiNakasaka/react-native-init
+```
+2) define setup.sh to the $PATH
+
+
+```
+ln -s ./setup /usr/local/bin/rn-init
+```
+
+3) make a directory for new project
+
+```
+mkdir new-project
+```
+
+4) run the script
+
+```
+rn-init
 ```
